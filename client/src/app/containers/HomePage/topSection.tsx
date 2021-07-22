@@ -2,6 +2,9 @@ import React from "react";
 import styled from "styled-components";
 import tw from "twin.macro";
 
+import MclarenCarImg from "../../../assets/images/mclaren-orange-big.png";
+import BlobImg from "../../../assets/images/blob.svg";
+
 
 const TopSectionContainer = styled.div`
   min-height: 400px;
@@ -92,7 +95,27 @@ const StandaloneCar = styled.div`
     height: 100%;
     max-width: fit-content;
   }
+`;
 
-export function TopSection() {
-    return ()
+  export function TopSection() {
+  return (
+    <TopSectionContainer>
+      <LeftContainer>
+        <Slogan>Rent The Best Qulity Car's With Us</Slogan>
+        <Description>
+          Always choose the best car from our local stores or order it remotely
+          at the best price for you and get the best quality cars for as long as
+          you like
+        </Description>
+      </LeftContainer>
+      <RightContainer>
+        <BlobContainer>
+          <img src={BlobImg} alt=''/>
+        </BlobContainer>
+        <StandaloneCar>
+          <img src={MclarenCarImg} alt=''/>
+        </StandaloneCar>
+      </RightContainer>
+    </TopSectionContainer>
+  );
 }
