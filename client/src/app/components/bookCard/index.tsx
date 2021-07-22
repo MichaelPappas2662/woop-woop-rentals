@@ -76,7 +76,7 @@ const DateCalendar = styled(Calendar)`
   `;
 
 export function BookCard() {
-    const [startDate, setStartDate] = useState();
+    const [startDate, setStartDate] = useState<Date>(new Date());
     const [isStartCalendarOpen, setStartCalendarOpen] = useState(false);
 
     const toggleStartDateCalendar = () => {
@@ -93,7 +93,7 @@ export function BookCard() {
             </Icon>
             <Name onClick={toggleStartDateCalendar} >Pick Up Date</Name>
             {isStartCalendarOpen && 
-          <DateCalendar  />
+          <DateCalendar value={startDate} onChange={setStartDate as any} />
         }
           </ItemContainer>
           <LineSeperator />
