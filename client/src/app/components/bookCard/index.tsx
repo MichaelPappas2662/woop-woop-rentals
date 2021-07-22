@@ -36,6 +36,17 @@ const Icon = styled.span`
   `};
 `;
 
+const Name = styled.span`
+  ${tw`
+    text-gray-600
+    text-xs
+    md:text-sm
+    cursor-pointer
+    select-none
+  `};
+`;
+
+
 export function BookCard() {
 
 }
