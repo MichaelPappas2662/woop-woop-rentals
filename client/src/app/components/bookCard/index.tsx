@@ -1,6 +1,10 @@
+import { faCalendarAlt } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
 import styled from "styled-components";
 import tw from "twin.macro";
+import { Marginer } from "../../../marginer";
+import { Button } from "../button";
 
 
 const CardContainer = styled.div`
@@ -59,5 +63,23 @@ const LineSeperator = styled.span`
 `;
 
 export function BookCard() {
-
+    return (
+        <CardContainer>
+          <ItemContainer>
+            <Icon>
+              <FontAwesomeIcon icon={faCalendarAlt} />
+            </Icon>
+            <Name >Pick Up Date</Name>
+          </ItemContainer>
+          <LineSeperator />
+          <ItemContainer>
+            <Icon>
+              <FontAwesomeIcon icon={faCalendarAlt} />
+            </Icon>
+            <Name >Return Date</Name>
+          </ItemContainer>
+          <Marginer direction="horizontal" margin="2em" />
+          <Button text="Book Your Ride" />
+        </CardContainer>
+      );
 }
