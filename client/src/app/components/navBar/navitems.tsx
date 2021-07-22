@@ -3,6 +3,7 @@ import styled, { css } from "styled-components";
 import tw from "twin.macro";
 import { slide as Menu } from "react-burger-menu";
 import { useMediaQuery } from "react-responsive";
+import { SCREENS } from "../responsive";
 
 const ListContainer = styled.ul`
   ${tw`
@@ -29,7 +30,27 @@ const NavItem = styled.li`
 
 export function NavItems(){
 
-  const isMobile = useMediaQuery
+  const isMobile = useMediaQuery({ maxWidth:SCREENS.sm }) ;
+
+  if (isMobile)
+    return (
+      <Menu right styles={menuStyles}>
+        <ListContainer>
+          <NavItem menu>
+            <a href="#">Home</a>
+          </NavItem>
+          <NavItem menu>
+            <a href="#">Cars</a>
+          </NavItem>
+          <NavItem menu>
+            <a href="#">Services</a>
+          </NavItem>
+          <NavItem menu>
+            <a href="#">Contact Us</a>
+          </NavItem>
+        </ListContainer>
+      </Menu>
+    );
 
 
 
