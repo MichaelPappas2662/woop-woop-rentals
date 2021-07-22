@@ -67,6 +67,21 @@ const Description = styled.p`
     `};
 `;
 
+const BlobContainer = styled.div`
+  width: 20em;
+  height: 10em;
+  position: absolute;
+  right: -5em;
+  top: -9em;
+  z-index: -1;
+  transform: rotate(-30deg);
+  img {
+    width: 100%;
+    height: auto;
+    max-height: max-content;
+  }
+`;
+
 export function TopSection() {
 
 }
