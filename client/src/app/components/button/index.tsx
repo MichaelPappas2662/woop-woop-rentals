@@ -4,7 +4,8 @@ import tw from "twin.macro";
 
 interface IButtonProps {
     theme?: "filled" | "outlined";
-    text: string;
+    text: string;   
+    className?: string;
 
 }
 
