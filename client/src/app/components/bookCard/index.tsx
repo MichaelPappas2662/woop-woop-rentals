@@ -21,6 +21,20 @@ const CardContainer = styled.div`
  `};
 `;
 
+const ItemContainer = styled.div`
+  ${tw`flex relative`};
+`;
+
+const Icon = styled.span`
+  ${tw`
+    text-red-500
+      fill-current
+      text-xs
+      md:text-base
+      mr-1
+      md:mr-3
+  `};
+`;
 
 export function BookCard() {
 
