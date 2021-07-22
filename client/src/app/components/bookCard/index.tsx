@@ -6,6 +6,9 @@ import tw from "twin.macro";
 import { Marginer } from "../../../marginer";
 import { Button } from "../button";
 
+import Calendar from "react-calendar";
+import "react-calendar/dist/Calendar.css";
+
 
 const CardContainer = styled.div`
     min-height: 4.3em;
@@ -64,14 +67,34 @@ const LineSeperator = styled.span`
   `};
 `;
 
+const DateCalendar = styled(Calendar)`
+  position: absolute;
+  max-width: none;
+  user-select: none;
+  top: 2em;
+  left: 0;
+  `;
+
 export function BookCard() {
+    const [startDate, setStartDate] = useState();
+    const [isStartCalendarOpen, setStartCalendarOpen] = useState(false);
+
+    const toggleStartDateCalendar = () => {
+        setStartCalendarOpen(!isStartCalendarOpen);
+    }
+
+
+
     return (
         <CardContainer>
           <ItemContainer>
             <Icon>
               <FontAwesomeIcon icon={faCalendarAlt} />
             </Icon>
-            <Name >Pick Up Date</Name>
+            <Name onClick={toggleStartDateCalendar} >Pick Up Date</Name>
+            {isStartCalendarOpen && 
+          <DateCalendar  />
+        }
           </ItemContainer>
           <LineSeperator />
           <ItemContainer>
