@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import tw from 'twin.macro';
-import { NavBar } from '../../components/navBar';
+import { Navbar } from '../../components/navBar';
 
 
 
@@ -19,6 +19,6 @@ const PageContainer = styled.div`
 
 export function HomePage() {
     return <PageContainer>
-       <NavBar />
+       <Navbar />
         </PageContainer>
 }
