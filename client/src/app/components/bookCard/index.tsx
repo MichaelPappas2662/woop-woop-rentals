@@ -1,4 +1,4 @@
-import { faCalendarAlt } from "@fortawesome/free-solid-svg-icons";
+import { faCalendarAlt, faCaretDown, faCaretUp } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
 import styled from "styled-components";
@@ -42,6 +42,16 @@ const Icon = styled.span`
       md:text-base
       mr-1
       md:mr-3
+  `};
+`;
+
+const SmallIcon = styled.span`
+  ${tw`
+    text-gray-500
+    fill-current
+    text-xs
+    md:text-base
+    ml-1
   `};
 `;
 
@@ -95,16 +105,21 @@ export function BookCard() {
 
 
 
-    return (
+      return (
         <CardContainer>
           <ItemContainer>
             <Icon>
               <FontAwesomeIcon icon={faCalendarAlt} />
             </Icon>
-            <Name onClick={toggleStartDateCalendar} >Pick Up Date</Name>
-            {isStartCalendarOpen && 
-                <DateCalendar value={startDate} onChange={setStartDate as any} />
-            }
+            <Name onClick={toggleStartDateCalendar}>Pick Up Date</Name>
+            <SmallIcon>
+              <FontAwesomeIcon
+                icon={isStartCalendarOpen ? faCaretUp : faCaretDown}
+              />
+            </SmallIcon>
+            {isStartCalendarOpen && (
+              <DateCalendar value={startDate} onChange={setStartDate as any} />
+            )}
           </ItemContainer>
           <LineSeperator />
           <ItemContainer>
@@ -112,12 +127,19 @@ export function BookCard() {
               <FontAwesomeIcon icon={faCalendarAlt} />
             </Icon>
             <Name onClick={toggleReturnDateCalendar}>Return Date</Name>
-            {isReturnCalendarOpen && 
-                <DateCalendar value={returnDate} onChange={setStartDate as any} />
-            }
+            <SmallIcon>
+              <FontAwesomeIcon
+                icon={isReturnCalendarOpen ? faCaretUp : faCaretDown}
+              />
+            </SmallIcon>
+            {isReturnCalendarOpen && (
+              <DateCalendar
+                onChange={setReturnDate as any}
+              />
+            )}
           </ItemContainer>
           <Marginer direction="horizontal" margin="2em" />
           <Button text="Book Your Ride" />
         </CardContainer>
       );
-}
+    }
