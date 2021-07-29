@@ -44,6 +44,31 @@ const CarName = styled.h3`
   `};
 `;
 
+const PricesContainer = styled.div`
+  ${tw`
+    w-full
+    flex
+    justify-start
+    mt-3
+  `};
+`;
+
+const DailyPrice = styled.h5`
+  ${tw`
+    text-red-500
+    font-bold
+    text-sm
+    mr-3
+  `};
+`;
+
+const MonthlyPrice = styled.h5`
+  ${tw`
+    text-gray-500
+    font-bold
+    text-sm
+  `};
+`;
 
 export function Car(props: ICarProps) {
     
