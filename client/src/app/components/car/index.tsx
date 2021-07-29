@@ -24,6 +24,16 @@ const CarContainer = styled.div`
     `};
 `;
 
+const CarThumbnail = styled.div`
+  width: 100%;
+  height: auto;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+`;
+
 
 export function Car(props: ICarProps) {
     
