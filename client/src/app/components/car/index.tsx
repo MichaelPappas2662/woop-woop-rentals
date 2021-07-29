@@ -120,5 +120,25 @@ const RentButton = styled(Button)`
 `;
 
 export function Car(props: ICarProps) {
-    
-};
+  const {
+    name,
+    thumbnailSrc,
+    dailyPrice,
+    monthlyPrice,
+    mileage,
+    gearType,
+    gas,
+  } = props; 
+
+  return (
+    <CarContainer>
+      <CarThumbnail>
+        <img src={thumbnailSrc} alt=''/>
+      </CarThumbnail>
+      <CarName> {name}</CarName>
+      <PricesContainer>
+        <DailyPrice>${dailyPrice}</DailyPrice>
+      </PricesContainer>
+    </CarContainer>
+  );
+}
