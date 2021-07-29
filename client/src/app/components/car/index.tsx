@@ -78,6 +78,28 @@ const SmallIcon = styled.span`
   `};
 `;
 
+const CarDetailsContainer = styled.div`
+  ${tw`
+    flex
+    w-full
+    justify-between
+  `};
+`;
+
+const CarDetail = styled.span`
+  ${tw`
+    flex
+    items-center
+  `};
+`;
+
+const CarInfo = styled.h6`
+  ${tw`
+    text-gray-400
+    text-xs
+  `};
+`;
+
 export function Car(props: ICarProps) {
     
 };
