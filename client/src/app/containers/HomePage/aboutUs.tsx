@@ -56,11 +56,25 @@ const InfoContainer = styled.div`
 `;
 
 const Title = styled.h1`
-  ${tw``};
+  ${tw`
+    text-black
+    text-2xl
+    md:text-5xl
+    font-extrabold
+    md:font-black
+    md:leading-normal
+  `};
 `;
 
 const InfoText = styled.p`
-  ${tw``};
+  ${tw`
+    max-w-2xl
+    text-gray-500
+    text-sm
+    md:text-base
+    font-normal
+    mt-4
+  `};
 `;
 
 export function AboutUs() {
