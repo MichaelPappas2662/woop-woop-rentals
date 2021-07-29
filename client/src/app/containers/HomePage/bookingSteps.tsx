@@ -14,13 +14,13 @@ const Container = styled.div`
     pb-3
     lg:pt-6
     lg:pb-6
-    `};
-  `;
+  `};
+`;
 
 const Title = styled.h2`
   ${tw`
-    text-xl
-    lg:text-4xl
+    text-3xl
+    lg:text-5xl
     text-black
     font-extrabold
   `};
@@ -36,16 +36,15 @@ const StepsContainer = styled.div`
   `};
 `;
 
-
 const StepContainer = styled.div`
   ${tw`
     flex
     flex-col
-    w-16
     md:w-96
     items-center
     transition-colors
     hover:text-red-500
+    m-3
   `};
 `;
 
@@ -79,8 +78,7 @@ const StepDescription = styled.p`
   `};
 `;
 
-
-const StepIcon =styled.span`
+const StepIcon = styled.span`
   ${tw`
     text-red-500
     text-3xl
