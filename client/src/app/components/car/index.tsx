@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import tw from "twin.macro";
 import { ICar } from "../../../typings/car";
+import { Button } from "../button";
 
 interface ICarProps extends ICar {};
 
@@ -108,6 +109,13 @@ const Seperator = styled.div`
     bg-gray-300
     mt-2
     mb-2
+  `};
+`;
+
+const RentButton = styled(Button)`
+  ${tw`
+    min-w-full
+    mt-5
   `};
 `;
 
