@@ -70,6 +70,14 @@ const MonthlyPrice = styled.h5`
   `};
 `;
 
+const SmallIcon = styled.span`
+  ${tw`
+    text-gray-400
+    text-sm
+    mr-1
+  `};
+`;
+
 export function Car(props: ICarProps) {
     
 };
