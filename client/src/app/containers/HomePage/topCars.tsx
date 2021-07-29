@@ -45,9 +45,6 @@ const CarsContainer = styled.div`
   `};
 `;
 
-const EmptyCars = styled.div``;
-
-const LoadingContainer = styled.div``;
 
 
 export function TopCars() {
