@@ -87,6 +87,15 @@ export function TopCars() {
                     (<Car{...testCar}/>), 
                     (<Car{...testCar2}/>)
                 ]}
+                plugins= {[
+                    "clickToChange",
+                    {
+                        resolve: slidesToShowPlugin,
+                        options: {
+                            numberOfSlides: 3,
+                        }
+                    }
+                ]}
             />
             <Dots value={current} onChange={setCurrent} number={2}/>
         </CarsContainer>
