@@ -7,55 +7,54 @@ import { SCREENS } from "../../components/responsive";
 import JeepImg from "../../../assets/images/jeep.png";
 
 const AboutUsContainer = styled.div`
-    ${tw`
-        w-full
-        flex
-        flex-wrap
-        items-center
-        2xl:justify-center
-        pt-4
-        pb-4
-        pr-7
-        pl-7
-        md:pl-0
-        md:pr-0
-        bg-white
-    `};
+  ${tw`
+    w-full
+    flex
+    flex-wrap
+    items-center
+    justify-center
+    pt-4
+    pb-4
+    pr-7
+    pl-7
+    md:pl-0
+    md:pr-0
+    bg-white
+  `};
 `;
 
 const CarContainer = styled.div`
+  width: auto;
+  height: 15em;
+  margin-left: -50px;
+
+  img {
     width: auto;
-    height: 15em;
-    margin-left: -30px;
+    height: 100%;
+  }
 
-    img{
-        width: auto;
-        height: 100%;
-    }
+  @media (min-width: ${SCREENS.md}) {
+    height: 28em;
+  }
 
+  @media (min-width: ${SCREENS.lg}) {
+    height: 30em;
+  }
 
-    @media (min-width: ${SCREENS.md}) {
-        height: 28em;
-    }
-
-    @media (min-width: ${SCREENS.lg}) {
-        height: 30em;
-    }
-
-    @media (min-width: ${SCREENS["2xl"]}) {
-        height: 35em;
-        margin-left: 0;
-    }
+  @media (min-width: ${SCREENS["2xl"]}) {
+    height: 35em;
+    margin-left: 0;
+  }
 `;
 
 const InfoContainer = styled.div`
-    ${tw`
-        w-1/2
-        flex
-        flex-col
-        md:ml-6
-        2xl:ml-16
-    `};
+  ${tw`
+    md:w-1/2
+    flex
+    flex-col
+    md:ml-6
+    2xl:ml-16
+  `};
 `;
 
 const Title = styled.h1`
@@ -71,10 +70,10 @@ const Title = styled.h1`
 
 const InfoText = styled.p`
   ${tw`
-    max-w-2xl
-    text-gray-500
+    md:max-w-2xl
     text-sm
     md:text-base
+    text-gray-500
     font-normal
     mt-4
   `};
