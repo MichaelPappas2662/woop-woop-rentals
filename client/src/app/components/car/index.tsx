@@ -100,6 +100,17 @@ const CarInfo = styled.h6`
   `};
 `;
 
+const Seperator = styled.div`
+  min-width: 100%;
+  min-height: 1px;
+  ${tw`
+    flex
+    bg-gray-300
+    mt-2
+    mb-2
+  `};
+`;
+
 export function Car(props: ICarProps) {
     
 };
