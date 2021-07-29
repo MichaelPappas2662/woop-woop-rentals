@@ -54,6 +54,15 @@ const PricesContainer = styled.div`
   `};
 `;
 
+const SmallText = styled.p`
+  color: inherit;
+  ${tw`
+    inline-flex
+    text-xs
+    font-thin
+  `};
+`;
+
 const DailyPrice = styled.h5`
   ${tw`
     text-red-500
