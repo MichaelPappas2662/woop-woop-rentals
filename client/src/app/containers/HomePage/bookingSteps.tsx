@@ -1,3 +1,5 @@
+import { faMapMarkedAlt } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import styled from "styled-components";
 import tw from "twin.macro";
@@ -66,11 +68,39 @@ const StepTitle = styled.h4`
   `};
 `;
 
-const StepDescription = styled.p
+const StepDescription = styled.p`
+  ${tw`
+    w-10/12
+    text-xs
+    md:text-sm
+    text-center
+    text-gray-600
+  `};
+`;
 
+
+const StepIcon =styled.span`
+  ${tw`
+    text-red-500
+    text-3xl
+  `};
+`;
 
 export function BookingSteps() {
-    return (
-
+    return ( <Container>
+      <StepsContainer>
+        <StepContainer>
+          <Step>
+            <StepIcon>
+              <FontAwesomeIcon icon={faMapMarkedAlt}/>
+            </StepIcon>
+          </Step>
+          <StepTitle>Choose Location</StepTitle>
+          <StepDescription>
+            Find the nearest W.W.R point and book your car.
+          </StepDescription>
+        </StepContainer>
+      </StepsContainer>
+    </Container>
     );
  }
