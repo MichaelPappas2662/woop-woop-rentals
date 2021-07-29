@@ -9,23 +9,24 @@ import { Button } from "../button";
 interface ICarProps extends ICar {};
 
 const CarContainer = styled.div`
-    min-width: 16.5em;
-    min-height: 22.2em;
-    max-height: 22.2em;
-    box-shadow: 0 1.3px 17px -2px rgba(0, 0, 0, 0.4);
-    ${tw`
-        flex
-        flex-col
-        items-center
-        p-3
-        pb-4
-        bg-white
-        rounded-md
-        m-1
-        sm:m-3
-        md:m-6
-    `};
+  width: 16.5em;
+  min-height: 23em;
+  max-height: 23em;
+  box-shadow: 0 1.3px 17px -2px rgba(0, 0, 0, 0.4);
+  ${tw`
+    flex
+    flex-col
+    items-center
+    p-3
+    pb-4
+    bg-white
+    rounded-md
+    m-1
+    sm:m-3
+    md:m-6
+  `};
 `;
+
 
 const CarThumbnail = styled.div`
   width: 100%;
