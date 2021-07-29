@@ -146,7 +146,14 @@ export function Car(props: ICarProps) {
       </CarThumbnail>
       <CarName> {name}</CarName>
       <PricesContainer>
-        <DailyPrice>${dailyPrice}</DailyPrice>
+        <DailyPrice>
+          ${dailyPrice}
+          <SmallText>/Day</SmallText>
+        </DailyPrice>
+        <MonthlyPrice>
+          ${monthlyPrice}
+          <SmallText>/Month</SmallText>
+        </MonthlyPrice>
       </PricesContainer>
     </CarContainer>
   );
