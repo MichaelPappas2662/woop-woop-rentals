@@ -103,3 +103,4 @@ export function AboutUs() {
       </InfoContainer>
     </AboutUsContainer>
     );
+    };
