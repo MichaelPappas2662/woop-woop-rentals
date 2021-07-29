@@ -57,6 +57,7 @@
     ]
   },
   "devDependencies": {
+    "@types/brainhubeu__react-carousel": "^2.0.3",
     "@types/react-calendar": "^3.1.6",
     "@types/redux-logger": "^3.0.8",
     "@types/styled-components": "^5.1.9",
