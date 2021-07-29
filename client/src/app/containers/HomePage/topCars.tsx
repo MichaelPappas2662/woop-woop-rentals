@@ -3,7 +3,8 @@ import styled from "styled-components";
 import tw from "twin.macro";
 import { ICar } from "../../../typings/car";
 import { Car } from "../../components/car";
-import Carousel from "@brainhubeu/react-carousel"
+import Carousel, { Dots, slidesToShowPlugin } from "@brainhubeu/react-carousel";
+import '@brainhubeu/react-carousel/lib/style.css';
 
 const TopCarsContainer = styled.div`
     ${tw`
@@ -48,6 +49,7 @@ const LoadingContainer = styled.div``;
 
 
 export function TopCars() {
+    const [current, setCurrent] = useState(0);
 
     const testCar: ICar = {
         name: "Audi S3 Car",
@@ -74,9 +76,19 @@ export function TopCars() {
     return <TopCarsContainer>
         <Title>Explore Our Top Deals</Title>
         <CarsContainer>
-          <Car{...testCar}/> 
-          <Car{...testCar}/>
-          <Car{...testCar2}/>
+            <Carousel 
+                value={current} 
+                onChange={setCurrent} 
+                slides={[ 
+                    (<Car{...testCar}/>), 
+                    (<Car{...testCar2}/>),
+                    (<Car{...testCar}/>), 
+                    (<Car{...testCar2}/>), 
+                    (<Car{...testCar}/>), 
+                    (<Car{...testCar2}/>)
+                ]}
+            />
+            <Dots value={current} onChange={setCurrent} number={2}/>
         </CarsContainer>
     </TopCarsContainer>
 
