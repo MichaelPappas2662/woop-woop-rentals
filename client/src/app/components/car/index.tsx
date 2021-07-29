@@ -34,6 +34,16 @@ const CarThumbnail = styled.div`
   }
 `;
 
+const CarName = styled.h3`
+  ${tw`
+    text-base
+    font-bold
+    text-black
+    mt-1
+    mb-1
+  `};
+`;
+
 
 export function Car(props: ICarProps) {
     
