@@ -4,18 +4,25 @@ import tw from "twin.macro";
 
 
 const FooterContainer = styled.div`
-    min-height: 20em;
+    min-height: 30em;
+    background-color: #1d2124;
     ${tw`
         flex
         flex-wrap
         min-w-full
-        bg-blue-900
         pt-7
         pb-1
 
     `};
 `;
 
+const AboutContainer = styled.div`
+    ${tw`
+        flex
+        flex-col
+    `};
+`;
+
 export function Footer() {
-    
+    return <FooterContainer>Container</FooterContainer>
 }
