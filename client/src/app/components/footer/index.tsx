@@ -35,12 +35,29 @@ const AboutContainer = styled.div`
     `};
 `;
 
+const AboutText = styled.p`
+  ${tw`
+    text-white
+    text-sm
+    font-normal
+    max-w-xs
+    leading-5
+    mt-2
+  `};
+`;
+
+
 export function Footer() {
     return (
     <FooterContainer>
         <InnerContainer>
             <AboutContainer>
                 <Logo color="white" bgColor = "dark"/>
+                <AboutText>
+                    Woop Woop Rental is a car renting and selling company,
+                    located in many countries across the world, 
+                    and has high quality cars and is top rated. 
+                </AboutText>
             </AboutContainer>
         </InnerContainer>
     </FooterContainer>
