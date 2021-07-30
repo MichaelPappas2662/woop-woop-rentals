@@ -46,6 +46,24 @@ const AboutText = styled.p`
   `};
 `;
 
+const LinksList = styled.ul`
+    ${tw`
+        outline-none
+        list-none
+        flex
+        flex-col
+    `};
+`;
+
+const HeaderTitle = styled.h3`
+  ${tw`
+    text-2xl
+    font-bold
+    text-white
+    mb-3
+  `};
+`;
+
 
 export function Footer() {
     return (
