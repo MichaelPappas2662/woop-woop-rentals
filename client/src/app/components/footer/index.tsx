@@ -9,12 +9,23 @@ const FooterContainer = styled.div`
     background-color: #1d2124;
     ${tw`
         flex
-        flex-wrap
+        flex-col
         min-w-full
-        pt-7
-        pb-1
-
+        pt-10
+        md:pt-16
+        items-center
+        justify-center
     `};
+`;
+
+const InnerContainer = styled.div`
+  ${tw`
+    flex
+    w-full
+    h-full
+    max-w-screen-2xl
+    flex-wrap
+  `};
 `;
 
 const AboutContainer = styled.div`
@@ -25,9 +36,13 @@ const AboutContainer = styled.div`
 `;
 
 export function Footer() {
-    return <FooterContainer>
-        <AboutContainer>
-            <Logo color="white" bgColor = "dark"/>
-        </AboutContainer>
+    return (
+    <FooterContainer>
+        <InnerContainer>
+            <AboutContainer>
+                <Logo color="white" bgColor = "dark"/>
+            </AboutContainer>
+        </InnerContainer>
     </FooterContainer>
+    );
 }
