@@ -27,7 +27,7 @@ const AboutContainer = styled.div`
 export function Footer() {
     return <FooterContainer>
         <AboutContainer>
-            <Logo color="white"/>
+            <Logo color="white" bgColor = "dark"/>
         </AboutContainer>
     </FooterContainer>
 }
