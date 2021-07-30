@@ -46,6 +46,23 @@ const AboutText = styled.p`
   `};
 `;
 
+const SectionContainer = styled.div`
+  ${tw`
+    w-full
+    md:w-auto
+    flex
+    flex-col
+    mr-2
+    md:mr-16
+    pl-10
+    pr-10
+    md:pl-3
+    md:pr-3
+    mt-7
+    md:mt-0
+  `};
+`;
+
 const LinksList = styled.ul`
     ${tw`
         outline-none
@@ -92,9 +109,16 @@ export function Footer() {
                     and has high quality cars and is top rated. 
                 </AboutText>
             </AboutContainer>
-            <LinksList>
+            <SectionContainer>
                 <HeaderTitle>Our Links</HeaderTitle>
+            <LinksList>
+                <ListItem><a href="#">Home</a></ListItem>
+                <ListItem><a href="#">About Us</a></ListItem>
+                <ListItem><a href="#">Services</a></ListItem>
+                <ListItem><a href="#">Models</a></ListItem>
+                <ListItem><a href="#">Blogs</a></ListItem>               
             </LinksList>
+            </SectionContainer>
         </InnerContainer>
     </FooterContainer>
     );
