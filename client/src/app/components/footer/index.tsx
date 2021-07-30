@@ -55,6 +55,21 @@ const LinksList = styled.ul`
     `};
 `;
 
+const ListItem = styled.li`
+  ${tw`
+    mb-3
+  `};
+
+  & > a {
+    ${tw`
+    text-sm
+    text-white
+    transition-all
+    hover:text-gray-200
+    `};
+  }
+`;
+
 const HeaderTitle = styled.h3`
   ${tw`
     text-2xl
@@ -77,6 +92,9 @@ export function Footer() {
                     and has high quality cars and is top rated. 
                 </AboutText>
             </AboutContainer>
+            <LinksList>
+                <HeaderTitle>Our Links</HeaderTitle>
+            </LinksList>
         </InnerContainer>
     </FooterContainer>
     );
