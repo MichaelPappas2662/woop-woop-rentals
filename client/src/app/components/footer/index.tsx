@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import tw from "twin.macro";
+import { Logo } from "../logo";
 
 
 const FooterContainer = styled.div`
@@ -24,5 +25,9 @@ const AboutContainer = styled.div`
 `;
 
 export function Footer() {
-    return <FooterContainer>Container</FooterContainer>
+    return <FooterContainer>
+        <AboutContainer>
+            <Logo color="white"/>
+        </AboutContainer>
+    </FooterContainer>
 }
