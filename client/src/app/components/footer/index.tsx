@@ -7,18 +7,19 @@ import { Logo } from "../logo";
 
 
 const FooterContainer = styled.div`
-    min-height: 30em;
-    background-color: #1d2124;
-    ${tw`
-        flex
-        flex-col
-        min-w-full
-        pt-10
-        md:pt-16
-        items-center
-        justify-center
-    `};
+  //min-height: 24em;
+  background-color: #1d2124;
+  ${tw`
+    flex
+    flex-col
+    min-w-full
+    pt-10
+    md:pt-16
+    items-center
+    justify-center
+  `};
 `;
+
 
 const InnerContainer = styled.div`
   ${tw`
@@ -28,6 +29,25 @@ const InnerContainer = styled.div`
     max-w-screen-2xl
     flex-wrap
   `};
+`;
+
+const BottomContainer = styled.div`
+  ${tw`
+    w-full
+    flex
+    max-w-screen-2xl
+    justify-center
+    md:justify-start
+    mt-7
+    md:mt-1
+  `};
+`;
+
+const CopyrightText = styled.small`
+  font-size: 12px;
+  ${tw`
+    text-gray-300
+  `}
 `;
 
 const AboutContainer = styled.div`
@@ -72,12 +92,12 @@ const SectionContainer = styled.div`
 `;
 
 const LinksList = styled.ul`
-    ${tw`
-        outline-none
-        list-none
-        flex
-        flex-col
-    `};
+  ${tw`
+    outline-none
+    list-none
+    flex
+    flex-col
+  `};
 `;
 
 const ListItem = styled.li`
@@ -87,10 +107,10 @@ const ListItem = styled.li`
 
   & > a {
     ${tw`
-    text-sm
+      text-sm
     text-white
-    transition-all
-    hover:text-gray-200
+      transition-all
+      hover:text-gray-200
     `};
   }
 `;
