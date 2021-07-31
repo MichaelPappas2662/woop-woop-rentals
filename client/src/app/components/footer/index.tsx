@@ -29,10 +29,16 @@ const InnerContainer = styled.div`
 `;
 
 const AboutContainer = styled.div`
-    ${tw`
-        flex
-        flex-col
-    `};
+  ${tw`
+    flex
+    flex-col
+    mr-2
+    md:mr-16
+    pl-10
+    pr-10
+    md:pl-3
+    md:pr-3
+  `};
 `;
 
 const AboutText = styled.p`
@@ -117,6 +123,16 @@ export function Footer() {
                 <ListItem><a href="#">Services</a></ListItem>
                 <ListItem><a href="#">Models</a></ListItem>
                 <ListItem><a href="#">Blogs</a></ListItem>               
+            </LinksList>
+            </SectionContainer>
+            <SectionContainer>
+                <HeaderTitle>Other Links</HeaderTitle>
+            <LinksList>
+                <ListItem><a href="#">FAQ</a></ListItem>
+                <ListItem><a href="#">Contact Us</a></ListItem>
+                <ListItem><a href="#">Support</a></ListItem>
+                <ListItem><a href="#">Privacy Policy</a></ListItem>
+                <ListItem><a href="#">Terms &amp; Conditions</a></ListItem>               
             </LinksList>
             </SectionContainer>
         </InnerContainer>
