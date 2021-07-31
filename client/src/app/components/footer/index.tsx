@@ -204,6 +204,11 @@ export function Footer() {
               </HorizontalContainer>
             </SectionContainer>
         </InnerContainer>
+        <BottomContainer>
+          <CopyrightText>
+            Copyright
+          </CopyrightText>
+        </BottomContainer>
     </FooterContainer>
     );
 }
