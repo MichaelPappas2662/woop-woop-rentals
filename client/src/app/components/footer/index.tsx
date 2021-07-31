@@ -102,6 +102,20 @@ const HeaderTitle = styled.h3`
   `};
 `;
 
+const RedIcon = styled.span`
+  ${tw`
+    w-5
+    h-5
+    rounded-full
+    flex
+    items-center
+    justify-center
+    text-white
+    text-base
+    mr-2
+  `};
+
+`;
 
 export function Footer() {
     return (
@@ -134,6 +148,9 @@ export function Footer() {
                 <ListItem><a href="#">Privacy Policy</a></ListItem>
                 <ListItem><a href="#">Terms &amp; Conditions</a></ListItem>               
             </LinksList>
+            </SectionContainer>
+            <SectionContainer>
+              <HeaderTitle>Call Now</HeaderTitle>
             </SectionContainer>
         </InnerContainer>
     </FooterContainer>
