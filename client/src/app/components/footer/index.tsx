@@ -1,4 +1,4 @@
-import { faPhoneAlt } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope, faPhoneAlt } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import styled from "styled-components";
@@ -113,9 +113,10 @@ const HorizontalContainer = styled.div`
 
 const RedIcon = styled.span`
   ${tw`
-    w-5
-    h-5
+    w-9
+    h-9
     rounded-full
+    bg-red-500
     flex
     items-center
     justify-center
@@ -123,7 +124,13 @@ const RedIcon = styled.span`
     text-base
     mr-2
   `};
+`;
 
+const SmallText = styled.h6`
+  ${tw`
+    text-sm
+    text-white
+  `};
 `;
 
 export function Footer() {
@@ -164,6 +171,16 @@ export function Footer() {
                 <RedIcon>
                   <FontAwesomeIcon icon={faPhoneAlt}/>
                 </RedIcon>
+                <SmallText>+6142-424-143</SmallText>
+              </HorizontalContainer>
+            </SectionContainer>
+            <SectionContainer>
+              <HeaderTitle>E-mail</HeaderTitle>
+              <HorizontalContainer>
+                <RedIcon>
+                  <FontAwesomeIcon icon={faEnvelope}/>
+                </RedIcon>
+                <SmallText>info@woopwooprentals.com.au</SmallText>
               </HorizontalContainer>
             </SectionContainer>
         </InnerContainer>
