@@ -206,7 +206,7 @@ export function Footer() {
         </InnerContainer>
         <BottomContainer>
           <CopyrightText>
-            Copyright
+            Copyright &copy; ${new Date().getFullYear()} Woop Woop Rentals. All rights reserved.
           </CopyrightText>
         </BottomContainer>
     </FooterContainer>
