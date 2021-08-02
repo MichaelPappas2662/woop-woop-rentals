@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import tw from "twin.macro";
@@ -99,18 +100,27 @@ export function TopCars() {
         gas: "Petrol",
       };
 
-    const cars =[ 
-        (<Car{...testCar}/>), 
-        (<Car{...testCar2}/>),
-        (<Car{...testCar}/>), 
-        (<Car{...testCar2}/>), 
-        (<Car{...testCar}/>), 
-        (<Car{...testCar2}/>)
-    ];
+    
+
+    // const cars =[ 
+    //     (<Car{...testCar}/>), 
+    //     (<Car{...testCar2}/>),
+    //     (<Car{...testCar}/>), 
+    //     (<Car{...testCar2}/>), 
+    //     (<Car{...testCar}/>), 
+    //     (<Car{...testCar2}/>)
+    // ];
 
     useEffect(() => {
       fetchTopCars();
     }, []);
+
+    const isEmptyTopCars = !topCars || topCars.length === 0;
+
+    const cars =
+    (!isEmptyTopCars &&
+      topCars.map((car) => <Car {...car} thumbnailSrc={car.thumbnailUrl} />)) ||
+    [];
 
     const numberOfDots = isMobile ? cars.length : Math.ceil(cars.length / 3);
 
