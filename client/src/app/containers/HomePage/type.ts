@@ -1,4 +1,4 @@
-import { GetCars_cars } from "../../services/carService/__generated__/GetCars";
+import { GetCars_cars } from "../../services/cars/__generated__/GetCars";
 
 export interface IHomePageState {
     topCars: GetCars_cars[];
