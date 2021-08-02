@@ -8,6 +8,10 @@ import '@brainhubeu/react-carousel/lib/style.css';
 import { SCREENS } from "../../components/responsive";
 import { useMediaQuery } from "react-responsive";
 import carService from "../../services/carService";
+import { Dispatch } from "redux";
+import { setTopCars } from "./slice";
+import { GetCars_cars } from "../../services/carService/__generated__/GetCars";
+import { useDispatch } from "react-redux";
 
 const TopCarsContainer = styled.div`
     ${tw`
@@ -46,12 +50,16 @@ const CarsContainer = styled.div`
   `};
 `;
 
-
+const actionDispatch = (dispatch: Dispatch) => ({
+  setTopCars: (cars: GetCars_cars[]) => dispatch(setTopCars(cars)),
+});
 
 export function TopCars() {
     const [current, setCurrent] = useState(0);
 
     const isMobile = useMediaQuery({ maxWidth: SCREENS.sm });
+
+    const { setTopCars } = actionDispatch(useDispatch());
 
     const fetchTopCars = async () => {
       const cars = await carService.getCars().catch((err) => {
