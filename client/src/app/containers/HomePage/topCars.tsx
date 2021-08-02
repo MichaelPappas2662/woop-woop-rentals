@@ -41,6 +41,17 @@ const Title = styled.h2`
     `};
 `;
 
+const EmptyCars = styled.div`
+  ${tw`
+    w-full
+    flex
+    justify-center
+    items-center
+    text-sm
+    text-gray-500
+  `};
+`;
+
 
 const CarsContainer = styled.div`
   ${tw`
@@ -90,7 +101,7 @@ export function TopCars() {
       };
     
     const testCar2: ICar = {
-        name: "HONDA cITY 5 Seater Car",
+        name: "HONDA CITY 5 Seater Car",
         mileage: "20k",
         thumbnailSrc:
           "https://shinewiki.com/wp-content/uploads/2019/11/honda-city.jpg",
@@ -126,6 +137,7 @@ export function TopCars() {
 
     return <TopCarsContainer>
         <Title>Explore Our Top Deals</Title>
+        {isEmptyTopCars && <EmptyCars>No Cars to Rent!</EmptyCars>}
         {!isEmptyTopCars && <CarsContainer>
             <Carousel 
                 value={current} 
