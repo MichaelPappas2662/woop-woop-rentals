@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import { Resolver, Query, Mutation } from '@nestjs/graphql';
+import { Resolver, Query, Mutation, Args } from '@nestjs/graphql';
 import { CarsService } from './cars.service';
+import { NewCarInput } from './dto/new-car.input';
 import { Car } from './entities/car';
 
 @Resolver()
@@ -15,5 +16,7 @@ export class CarsResolver {
   }
 
   @Mutation((_returns) => Car)
-  public async addNewCar(): Promise<Car> {}
+  public async addNewCar(
+    @Args('newCarData') newCarData: NewCarInput,
+  ): Promise<Car> {}
 }
