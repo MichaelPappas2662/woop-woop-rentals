@@ -21,6 +21,7 @@
     "@types/react-redux": "^7.1.7",
     "@types/react-responsive": "^8.0.2",
     "express": "^4.17.1",
+    "framer-motion": "^4.1.17",
     "graphql": "^15.5.0",
     "react": "^17.0.2",
     "react-burger-menu": "^3.0.6",
