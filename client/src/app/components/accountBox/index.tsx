@@ -48,6 +48,14 @@ const HeaderContainer = styled.div`
   flex-direction: column;
 `;
 
+const HeaderText = styled.h2`
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 1.24;
+  color: #fff;
+  z-index: 10;
+  margin: 0;
+`;
 
 
 export function AccountBox(props: any) {
@@ -55,9 +63,11 @@ export function AccountBox(props: any) {
   return (
       <BoxContainer>
         <TopContainer>
-          <BackDrop
-            
-          />
+          <BackDrop />
+          <HeaderContainer>
+            <HeaderText>Welcome</HeaderText>
+            <HeaderText>Back</HeaderText>
+          </HeaderContainer>
         </TopContainer>
        
       </BoxContainer>
