@@ -8,6 +8,8 @@ export class CarsResolver {
 
   @Query((returns) => [Car])
   public async cars(): Promise<Car[]> {
-    return await this.carsService.getAllCars();
+    return await this.carsService.getAllCars().catch((err) => {
+      throw err;
+    });
   }
 }
