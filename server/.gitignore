@@ -1,5 +1,4 @@
-.env
-ormconfig.json
+
 
 # compiled output
 /dist
@@ -16,6 +15,8 @@ lerna-debug.log*
 
 # OS
 .DS_Store
+.env
+ormconfig.json
 
 # Tests
 /coverage
