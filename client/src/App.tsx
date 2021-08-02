@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import tw from 'twin.macro';
 import './App.css';
+import { AccountBox } from './app/components/accountBox';
 import { HomePage } from './app/containers/HomePage';
 
 const AppContainer = styled.div`
@@ -15,6 +16,7 @@ const AppContainer = styled.div`
 
 function App() {
   return <AppContainer>
+    <AccountBox />
     <HomePage></HomePage>
     </AppContainer>
 }
