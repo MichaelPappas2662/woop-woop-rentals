@@ -12,7 +12,7 @@ import { ComponentsModule } from './components/components.module';
     DatabaseModule,
     GraphQLModule.forRoot({
       playground: true,
-      debug: (process.env.NODE_ENV === 'development' && true) || false,
+      debug: true,
       autoSchemaFile: true,
     }),
     ComponentsModule,
