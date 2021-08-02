@@ -11,7 +11,7 @@ import carService from "../../services/carService";
 import { Dispatch } from "redux";
 import { setTopCars } from "./slice";
 import { GetCars_cars } from "../../services/carService/__generated__/GetCars";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { createSelector } from "reselect";
 import { makeSelectTopCars } from "./selector";
 
@@ -56,14 +56,16 @@ const actionDispatch = (dispatch: Dispatch) => ({
   setTopCars: (cars: GetCars_cars[]) => dispatch(setTopCars(cars)),
 });
 
-const stateSelector = createSelector(makeSelectTopCars, (TopCars) =>
-{})
+const stateSelector = createSelector(makeSelectTopCars, (topCars) => ({
+  topCars,
+}));
 
 export function TopCars() {
     const [current, setCurrent] = useState(0);
 
     const isMobile = useMediaQuery({ maxWidth: SCREENS.sm });
 
+    const { topCars } = useSelector(stateSelector);
     const { setTopCars } = actionDispatch(useDispatch());
 
     const fetchTopCars = async () => {
