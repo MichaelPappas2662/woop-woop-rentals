@@ -42,10 +42,15 @@ const BackDrop = styled(motion.div)`
   );
 `;
 
+const HeaderContainer = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+`;
 
 
 
-export function AccountBox(props) {
+export function AccountBox(props: any) {
   
   return (
       <BoxContainer>
