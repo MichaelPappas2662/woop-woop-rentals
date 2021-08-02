@@ -67,6 +67,7 @@ export function TopCars() {
       });
 
       console.log("Car:", cars);
+      if(cars) setTopCars(cars);
     }
 
     const testCar: ICar = {
