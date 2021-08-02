@@ -126,7 +126,7 @@ export function TopCars() {
 
     return <TopCarsContainer>
         <Title>Explore Our Top Deals</Title>
-        <CarsContainer>
+        {!isEmptyTopCars && <CarsContainer>
             <Carousel 
                 value={current} 
                 onChange={setCurrent} 
@@ -167,7 +167,7 @@ export function TopCars() {
                 value={current} 
                 onChange={setCurrent} 
                 number={numberOfDots}/>
-        </CarsContainer>
+        </CarsContainer>}
     </TopCarsContainer>
 
 };
