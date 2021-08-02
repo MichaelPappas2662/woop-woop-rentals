@@ -1,14 +1,15 @@
-import { Field, InputType } from '@nestjs/graphql';
+import { Field, InputType, Int } from '@nestjs/graphql';
+import { type } from 'os';
 
 @InputType()
 export class NewCarInput {
   @Field()
   name: string;
 
-  @Field()
+  @Field((type) => Int)
   monthlyPrice: number;
 
-  @Field()
+  @Field((type) => Int)
   dailyPrice: number;
 
   @Field()
