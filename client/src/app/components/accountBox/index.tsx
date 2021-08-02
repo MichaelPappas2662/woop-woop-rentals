@@ -57,6 +57,15 @@ const HeaderText = styled.h2`
   margin: 0;
 `;
 
+const SmallText = styled.h5`
+  color: #fff;
+  font-weight: 500;
+  font-size: 11px;
+  z-index: 10;
+  margin: 0;
+  margin-top: 7px;
+`;
+
 
 export function AccountBox(props: any) {
   
@@ -67,6 +76,7 @@ export function AccountBox(props: any) {
           <HeaderContainer>
             <HeaderText>Welcome</HeaderText>
             <HeaderText>Back</HeaderText>
+            <SmallText>Please sign in to continue!</SmallText>
           </HeaderContainer>
         </TopContainer>
        
