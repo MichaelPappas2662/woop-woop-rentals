@@ -1,4 +1,5 @@
-import { Resolver, Query } from '@nestjs/graphql';
+/* eslint-disable @typescript-eslint/no-unused-vars */
+import { Resolver, Query, Mutation } from '@nestjs/graphql';
 import { CarsService } from './cars.service';
 import { Car } from './entities/car';
 
@@ -6,10 +7,13 @@ import { Car } from './entities/car';
 export class CarsResolver {
   constructor(private carsService: CarsService) {}
 
-  @Query((returns) => [Car])
+  @Query((_returns) => [Car])
   public async cars(): Promise<Car[]> {
     return await this.carsService.getAllCars().catch((err) => {
       throw err;
     });
   }
+
+  @Mutation((_returns) => Car)
+  public async addNewCar(): Promise<Car> {}
 }
