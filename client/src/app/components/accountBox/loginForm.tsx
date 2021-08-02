@@ -1,5 +1,6 @@
 import React from "react";
-import { BoxContainer, FormContainer, Input } from "./common";
+import { Marginer } from "../../../marginer";
+import { BoxContainer, FormContainer, Input, MutedLink, SubmitButton } from "./common";
 
 export function LoginForm() {
 
@@ -8,6 +9,10 @@ export function LoginForm() {
             <FormContainer>
                 <Input type="email" placeholder="Email"/>
                 <Input type="password" placeholder="Password"/>
+                <Marginer direction="vertical" margin={10}/>
+                <MutedLink href="#">Forgot your password?</MutedLink>
+                <Marginer direction="vertical" margin="1.6em" />s
+                <SubmitButton type="submit">Sign-In</SubmitButton>
             </FormContainer>
         </BoxContainer>
     )
