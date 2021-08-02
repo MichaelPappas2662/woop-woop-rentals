@@ -24,19 +24,18 @@ const AppContainer = styled.div`
 
 function App() {
     return (
-    
-      <AppContainer>
-    <Router>
-     <Switch>
-       <Route path="/login">
-      <AccountBox />
-      </Route>
-      <Route path="/homepage">
-      <HomePage />
-      </Route>
-      </Switch>
-    </Router>
-      </AppContainer>
+      <Router>
+        <Switch>
+          <Route path="/login">
+            <AccountBox />
+          </Route>
+        <AppContainer>
+          <Route path="/homepage">
+            <HomePage />
+          </Route>
+        </AppContainer>
+        </Switch>
+      </Router>
   )
   
 }
