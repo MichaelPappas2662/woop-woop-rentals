@@ -119,7 +119,7 @@ export function TopCars() {
   };
 
   const testCar2: ICar = {
-    name: "HONDA CITY 5 Seater Car",
+    name: "HONDA cITY 5 Seater Car",
     mileage: "20k",
     thumbnailSrc:
       "https://shinewiki.com/wp-content/uploads/2019/11/honda-city.jpg",
