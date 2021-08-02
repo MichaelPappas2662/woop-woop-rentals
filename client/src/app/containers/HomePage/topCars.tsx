@@ -15,6 +15,8 @@ import { GetCars_cars } from "../../services/carService/__generated__/GetCars";
 import { useDispatch, useSelector } from "react-redux";
 import { createSelector } from "reselect";
 import { makeSelectTopCars } from "./selector";
+import MoonLoader from "react-spinners/MoonLoader";
+
 
 const TopCarsContainer = styled.div`
     ${tw`
@@ -61,6 +63,18 @@ const CarsContainer = styled.div`
     justify-center
     mt-7
     md:mt-10
+  `};
+`;
+
+const LoadingContainer = styled.div`
+  ${tw`
+    w-full
+    mt-9
+    flex
+    justify-center
+    items-center
+    text-base
+    text-black
   `};
 `;
 
