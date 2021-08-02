@@ -12,6 +12,8 @@ import { Dispatch } from "redux";
 import { setTopCars } from "./slice";
 import { GetCars_cars } from "../../services/carService/__generated__/GetCars";
 import { useDispatch } from "react-redux";
+import { createSelector } from "reselect";
+import { makeSelectTopCars } from "./selector";
 
 const TopCarsContainer = styled.div`
     ${tw`
@@ -53,6 +55,9 @@ const CarsContainer = styled.div`
 const actionDispatch = (dispatch: Dispatch) => ({
   setTopCars: (cars: GetCars_cars[]) => dispatch(setTopCars(cars)),
 });
+
+const stateSelector = createSelector(makeSelectTopCars, (TopCars) =>
+{})
 
 export function TopCars() {
     const [current, setCurrent] = useState(0);
