@@ -89,6 +89,12 @@ const backdropVariants = {
   },
 };
 
+const expandingTransition = {
+  type: "spring",
+  duration: 2.3,
+  stiffness: 30,
+};
+
 export function AccountBox(props: any) {
   const [isExpanded, setExpanded] = useState(false);
 
