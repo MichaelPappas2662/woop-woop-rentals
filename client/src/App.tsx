@@ -1,17 +1,16 @@
 import React from 'react';
-import GoogleButton from 'react-google-button';
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route, 
 } from "react-router-dom";
 import styled from 'styled-components';
 import tw from 'twin.macro';
 import './App.css';
 import { AccountBox } from './app/components/accountBox';
 import { HomePage } from './app/containers/HomePage';
-import axios from 'axios';
+import { LoginSuccess } from './app/containers/LoginSuccess';
+
 
 
 
@@ -27,26 +26,9 @@ const AppContainer = styled.div`
 `;
 
 
-function App() {
 
-  const redirectToGoogleSSO = async () => {
-    let timer: NodeJS.Timeout | null = null;
-    const googleLoginURL = "http://localhost:5000/api/v1/login/google";
-    const newWindow = window.open(
-      googleLoginURL,
-      "_blank",
-      "width=500,height=600"
-    );
-    if (newWindow) {
-      timer = setInterval(() => {
-        if (newWindow.closed) {
-          console.log("Yay we're authenticated");
-          
-          if (timer) clearInterval(timer);
-        }
-      }, 500);
-    }
-  };
+function App() {
+  
 
     return (
       <Router>
@@ -55,9 +37,8 @@ function App() {
             <Route path="/">
               <AccountBox />
             </Route>
-            <Route>
-              <GoogleButton onClick={redirectToGoogleSSO}/>
-              </Route>
+          <Route exact path="/login/success" component={LoginSuccess} />
+          <Route path="/login/error"></Route>
           <Route path="/homepage">
             <HomePage />
           </Route>
