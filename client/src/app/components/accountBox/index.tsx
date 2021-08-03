@@ -135,11 +135,20 @@ export function AccountBox(props: any) {
             variants={backdropVariants}
             transition={expandingTransition} 
             />
-          <HeaderContainer>
-            <HeaderText>Welcome</HeaderText>
-            <HeaderText>Back</HeaderText>
-            <SmallText>Please sign in to continue!</SmallText>
-          </HeaderContainer>
+          {active === "signIn" && (
+            <HeaderContainer>
+              <HeaderText>Welcome</HeaderText>
+              <HeaderText>Back</HeaderText>
+              <SmallText>Please sign-In to continue!</SmallText>
+            </HeaderContainer>
+          )}
+          {active === "signup" && (
+            <HeaderContainer>
+              <HeaderText>Create</HeaderText>
+              <HeaderText>Account</HeaderText>
+              <SmallText>Please sign-Up to continue!</SmallText>
+            </HeaderContainer>
+          )}
         </TopContainer>
         <InnerContainer>
           {active === "signIn" && <LoginForm />}
