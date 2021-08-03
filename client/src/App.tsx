@@ -11,6 +11,8 @@ import tw from 'twin.macro';
 import './App.css';
 import { AccountBox } from './app/components/accountBox';
 import { HomePage } from './app/containers/HomePage';
+import axios from 'axios';
+
 
 
 const AppContainer = styled.div`
@@ -26,6 +28,26 @@ const AppContainer = styled.div`
 
 
 function App() {
+
+  const redirectToGoogleSSO = async () => {
+    let timer: NodeJS.Timeout | null = null;
+    const googleLoginURL = "http://localhost:5000/api/v1/login/google";
+    const newWindow = window.open(
+      googleLoginURL,
+      "_blank",
+      "width=500,height=600"
+    );
+    if (newWindow) {
+      timer = setInterval(() => {
+        if (newWindow.closed) {
+          console.log("Yay we're authenticated");
+          
+          if (timer) clearInterval(timer);
+        }
+      }, 500);
+    }
+  };
+
     return (
       <Router>
         <Switch>
@@ -33,7 +55,9 @@ function App() {
             <Route path="/">
               <AccountBox />
             </Route>
-            <Route><GoogleButton/></Route>
+            <Route>
+              <GoogleButton onClick={redirectToGoogleSSO}/>
+              </Route>
           <Route path="/homepage">
             <HomePage />
           </Route>
