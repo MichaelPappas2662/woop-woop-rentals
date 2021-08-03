@@ -34,11 +34,11 @@ function App() {
       <Router>
         <Switch>
         <AppContainer>
-            <Route path="/">
+            <Route path="/login">
+            <Route exact path="/login/success" component={LoginSuccess} />
+            <Route path="/login/error"></Route>
               <AccountBox />
             </Route>
-          <Route exact path="/login/success" component={LoginSuccess} />
-          <Route path="/login/error"></Route>
           <Route path="/homepage">
             <HomePage />
           </Route>
