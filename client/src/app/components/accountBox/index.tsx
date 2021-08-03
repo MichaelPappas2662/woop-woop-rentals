@@ -97,12 +97,27 @@ const expandingTransition = {
 
 export function AccountBox(props: any) {
   const [isExpanded, setExpanded] = useState(false);
+  const [active, setActive] = useState("signIn");
 
   const playExpandingAnimation = () => {
     setExpanded(true);
     setTimeout(() => {
       setExpanded(false);
     }, expandingTransition.duration * 1000 - 1500);
+  };
+
+  const switchToSignup = () => {
+    playExpandingAnimation();
+    setTimeout(() => {
+      setActive("signup");
+    }, 400);
+  };
+
+  const switchToSignin = () => {
+    playExpandingAnimation();
+    setTimeout(() => {
+      setActive("signIn");
+    }, 400);
   };
 
   
