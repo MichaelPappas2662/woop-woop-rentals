@@ -91,6 +91,14 @@ const backdropVariants = {
 
 export function AccountBox(props: any) {
   const [isExpanded, setExpanded] = useState(false);
+
+  const playExpandingAnimation = () => {
+    setExpanded(true);
+    setTimeout(() => {
+      setExpanded(false);
+    }, 3000);
+  };
+
   
   return (
       <BoxContainer>
@@ -108,6 +116,7 @@ export function AccountBox(props: any) {
         </TopContainer>
         <InnerContainer>
           <LoginForm />
+          <p onClick={playExpandingAnimation}>click me</p>
         </InnerContainer>   
       </BoxContainer>
   );
