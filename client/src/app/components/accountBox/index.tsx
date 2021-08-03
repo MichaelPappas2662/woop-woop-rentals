@@ -102,7 +102,7 @@ export function AccountBox(props: any) {
     setExpanded(true);
     setTimeout(() => {
       setExpanded(false);
-    }, 3000);
+    }, expandingTransition.duration * 1000 - 1500);
   };
 
   
@@ -113,6 +113,7 @@ export function AccountBox(props: any) {
             initial={false}
             animate={isExpanded ? "expanded" : "collapsed"}
             variants={backdropVariants}
+            transition={expandingTransition} 
             />
           <HeaderContainer>
             <HeaderText>Welcome</HeaderText>
