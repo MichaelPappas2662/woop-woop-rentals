@@ -28,7 +28,7 @@ export function LoginForm() {
       console.log("User: ", response.data);
       dispatch(setIsAuthenticated(true));
       dispatch(setAuthUser(response.data));
-      history.push("/welcome");
+      history.push("/homepage");
     }
   };
 
