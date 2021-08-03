@@ -18,6 +18,8 @@ const AppContainer = styled.div`
     h-full
     flex
     flex-col
+    justify-center
+    items-center
     `};
 `;
 
@@ -26,10 +28,10 @@ function App() {
     return (
       <Router>
         <Switch>
-          <Route path="/*">
-            <AccountBox />
-          </Route>
         <AppContainer>
+            <Route path="/login">
+              <AccountBox />
+            </Route>
           <Route path="/homepage">
             <HomePage />
           </Route>
