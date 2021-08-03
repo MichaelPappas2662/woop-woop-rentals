@@ -11,7 +11,7 @@ export function LoginForm() {
                 <Input type="password" placeholder="Password"/>
                 <Marginer direction="vertical" margin={10}/>
                 <MutedLink href="#">Forgot your password?</MutedLink>
-                <Marginer direction="vertical" margin="1.6em" />s
+                <Marginer direction="vertical" margin="1.6em" />
                 <SubmitButton type="submit">Sign-In</SubmitButton>
             </FormContainer>
         </BoxContainer>
