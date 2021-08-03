@@ -7,12 +7,15 @@ import { Provider } from 'react-redux';
 import * as serviceWorker from './serviceWorker';
 import { ApolloProvider } from '@apollo/client';
 import { apolloClient } from './app/graphql';
+import { BrowserRouter, BrowserRouter as Router } from "react-router-dom";
 
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
       <ApolloProvider client={apolloClient}>
+        <BrowserRouter>
       <App />
+      </BrowserRouter>
       </ApolloProvider>
     </Provider>
   </React.StrictMode>,

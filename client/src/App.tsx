@@ -1,4 +1,5 @@
 import React from 'react';
+import GoogleButton from 'react-google-button';
 import {
   BrowserRouter as Router,
   Switch,
@@ -29,9 +30,10 @@ function App() {
       <Router>
         <Switch>
         <AppContainer>
-            <Route path="/login">
+            <Route path="/">
               <AccountBox />
             </Route>
+            <Route><GoogleButton/></Route>
           <Route path="/homepage">
             <HomePage />
           </Route>
