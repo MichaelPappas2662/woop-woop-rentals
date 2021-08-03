@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import { LoginForm } from "./loginForm";
+import { AccountContext } from "./accountContext";
+import { SignupForm } from "./signupForm";
 
 const BoxContainer = styled.div`
   width: 280px;
@@ -113,15 +115,18 @@ export function AccountBox(props: any) {
     }, 400);
   };
 
-  const switchToSignin = () => {
+  const switchToSignIn = () => {
     playExpandingAnimation();
     setTimeout(() => {
       setActive("signIn");
     }, 400);
   };
 
+  const contextValue = { switchToSignup, switchToSignIn };
+
   
   return (
+    <AccountContext.Provider value={contextValue}>
       <BoxContainer>
         <TopContainer>
           <BackDrop 
@@ -137,9 +142,10 @@ export function AccountBox(props: any) {
           </HeaderContainer>
         </TopContainer>
         <InnerContainer>
-          <LoginForm />
-          <p onClick={playExpandingAnimation}>click me</p>
+          {active === "signIn" && <LoginForm />}
+          {active === "signup" && <SignupForm />}
         </InnerContainer>   
       </BoxContainer>
+      </AccountContext.Provider>
   );
 }
