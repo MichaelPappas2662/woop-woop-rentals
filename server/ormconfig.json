@@ -20,7 +20,7 @@
     "host": "mysqldb",
     "port": 3306,
     "username": "root",
-    "password": "p9$p$NE$AGGvFc53yfFW",
+    "password": "pass123",
     "database": "woopDb",
     "entities": ["dist/**/entities/*{.ts,.js}"],
     "synchronize": true,
